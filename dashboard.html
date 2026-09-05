@@ -1,1 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Panel empresarial de TecnoDoc Pro"
+    >
+
+    <title>Dashboard | TecnoDoc Pro</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body class="dashboard-body">
+
+    <!-- =========================================
+         CONTENEDOR PRINCIPAL
+    ========================================== -->
+
+    <div class="app-layout">
+
+
+        <!-- =====================================
+             BARRA LATERAL
+        ====================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="sidebar-brand">
+
+                <div class="brand-icon">
+                    TD
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        TecnoDoc
+                    </strong>
+
+                    <span>
+                        Pro
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMPRESA -->
+
+            <div class="company-mini">
+
+                <div class="company-avatar">
+                    EM
+                </div>
+
+                <div>
+
+                    <strong>
+                        Mi Empresa
+                    </strong>
+
+                    <span>
+                        Cuenta empresarial
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MENÚ -->
+
+            <nav class="sidebar-nav">
+
+                <p class="nav-title">
+                    PRINCIPAL
+                </p>
+
+
+                <a
+                    href="dashboard.html"
+                    class="nav-link active"
+                >
+
+                    <span class="nav-icon">
+                        ▦
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ◉
+                    </span>
+
+                    <span>
+                        Clientes
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ▤
+                    </span>
+
+                    <span>
+                        Proformas
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ▥
+                    </span>
+
+                    <span>
+                        Informes técnicos
+                    </span>
+
+                </a>
+
+
+                <p class="nav-title">
+                    INVENTARIO
+                </p>
+
+
+                <a
+                    href="#"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ▣
+                    </span>
+
+                    <span>
+                        Almacén
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ◫
+                    </span>
+
+                    <span>
+                        Productos
+                    </span>
+
+                </a>
+
+
+                <p class="nav-title">
+                    SISTEMA
+                </p>
+
+
+                <a
+                    href="#"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ◴
+                    </span>
+
+                    <span>
+                        Historial
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="nav-link"
+                >
+
+                    <span class="nav-icon">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Configuración
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- PARTE INFERIOR -->
+
+            <div class="sidebar-bottom">
+
+                <div class="credits-mini">
+
+                    <div class="credits-header">
+
+                        <span>
+                            Créditos
+                        </span>
+
+                        <strong>
+                            16 / 20
+                        </strong>
+
+                    </div>
+
+                    <div class="credits-bar">
+
+                        <div class="credits-progress"></div>
+
+                    </div>
+
+                    <small>
+                        Renovación cada 30 días
+                    </small>
+
+                </div>
+
+
+                <button
+                    class="logout-button"
+                    id="logoutButton"
+                >
+
+                    <span>
+                        ⇥
+                    </span>
+
+                    Cerrar sesión
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================
+             CONTENIDO PRINCIPAL
+        ====================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================
+                 HEADER
+            ================================== -->
+
+            <header class="topbar">
+
+
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Abrir menú"
+                >
+                    ☰
+                </button>
+
+
+                <div class="topbar-search">
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        placeholder="Buscar..."
+                        id="globalSearch"
+                    >
+
+                </div>
+
+
+                <div class="topbar-actions">
+
+
+                    <button
+                        class="topbar-button"
+                        aria-label="Notificaciones"
+                    >
+                        ♢
+                    </button>
+
+
+                    <div class="user-menu">
+
+                        <div class="user-avatar">
+                            MJ
+                        </div>
+
+                        <div class="user-info">
+
+                            <strong>
+                                Usuario
+                            </strong>
+
+                            <span>
+                                Administrador
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================
+                 CONTENIDO
+            ================================== -->
+
+            <section class="dashboard-content">
+
+
+                <!-- SALUDO -->
+
+                <div class="page-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            PANEL EMPRESARIAL
+                        </p>
+
+                        <h1>
+                            Bienvenido a TecnoDoc Pro
+                        </h1>
+
+                        <p class="page-description">
+                            Gestiona tus clientes, documentos,
+                            productos y operaciones desde un solo lugar.
+                        </p>
+
+                    </div>
+
+
+                    <div class="heading-actions">
+
+                        <button
+                            class="button button-secondary"
+                        >
+                            + Nuevo informe
+                        </button>
+
+                        <button
+                            class="button button-primary"
+                        >
+                            + Nueva proforma
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================
+                     TARJETAS DE ESTADÍSTICAS
+                ================================== -->
+
+                <div class="stats-grid">
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon">
+                                ◉
+                            </div>
+
+                            <span class="stat-label">
+                                Clientes
+                            </span>
+
+                        </div>
+
+                        <strong class="stat-number">
+                            124
+                        </strong>
+
+                        <p class="stat-change">
+                            +8 este mes
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon">
+                                ▤
+                            </div>
+
+                            <span class="stat-label">
+                                Proformas
+                            </span>
+
+                        </div>
+
+                        <strong class="stat-number">
+                            18
+                        </strong>
+
+                        <p class="stat-change">
+                            Este mes
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon">
+                                ▥
+                            </div>
+
+                            <span class="stat-label">
+                                Informes
+                            </span>
+
+                        </div>
+
+                        <strong class="stat-number">
+                            12
+                        </strong>
+
+                        <p class="stat-change">
+                            Este mes
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="stat-card">
+
+                        <div class="stat-top">
+
+                            <div class="stat-icon">
+                                ◫
+                            </div>
+
+                            <span class="stat-label">
+                                Productos
+                            </span>
+
+                        </div>
+
+                        <strong class="stat-number">
+                            356
+                        </strong>
+
+                        <p class="stat-change">
+                            Inventario actual
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- =================================
+                     DOS COLUMNAS
+                ================================== -->
+
+                <div class="dashboard-grid">
+
+
+                    <!-- ACTIVIDAD -->
+
+                    <section class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>
+                                    Actividad reciente
+                                </h2>
+
+                                <p>
+                                    Últimos documentos registrados
+                                </p>
+
+                            </div>
+
+                            <button class="text-button">
+                                Ver todo
+                            </button>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon proforma">
+                                    PR
+                                </div>
+
+                                <div class="activity-info">
+
+                                    <strong>
+                                        PRF-0001
+                                    </strong>
+
+                                    <span>
+                                        Proforma · Cliente ABC
+                                    </span>
+
+                                </div>
+
+                                <div class="activity-value">
+                                    S/ 5,230.00
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon informe">
+                                    IN
+                                </div>
+
+                                <div class="activity-info">
+
+                                    <strong>
+                                        INF-0001
+                                    </strong>
+
+                                    <span>
+                                        Informe técnico · Cliente XYZ
+                                    </span>
+
+                                </div>
+
+                                <div class="activity-value">
+                                    —
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon proforma">
+                                    PR
+                                </div>
+
+                                <div class="activity-info">
+
+                                    <strong>
+                                        PRF-0002
+                                    </strong>
+
+                                    <span>
+                                        Proforma · Empresa Demo
+                                    </span>
+
+                                </div>
+
+                                <div class="activity-value">
+                                    S/ 2,850.00
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="activity-item">
+
+                                <div class="activity-icon informe">
+                                    IN
+                                </div>
+
+                                <div class="activity-info">
+
+                                    <strong>
+                                        INF-0002
+                                    </strong>
+
+                                    <span>
+                                        Informe técnico · Cliente DEF
+                                    </span>
+
+                                </div>
+
+                                <div class="activity-value">
+                                    —
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- CRÉDITOS -->
+
+                    <section class="panel credits-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>
+                                    Uso de créditos
+                                </h2>
+
+                                <p>
+                                    Consumo de este período
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="credit-block">
+
+                            <div class="credit-row">
+
+                                <span>
+                                    Proformas
+                                </span>
+
+                                <strong>
+                                    8 / 10
+                                </strong>
+
+                            </div>
+
+                            <div class="large-progress">
+
+                                <div
+                                    class="large-progress-fill"
+                                    style="width: 80%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="credit-block">
+
+                            <div class="credit-row">
+
+                                <span>
+                                    Informes técnicos
+                                </span>
+
+                                <strong>
+                                    6 / 10
+                                </strong>
+
+                            </div>
+
+                            <div class="large-progress">
+
+                                <div
+                                    class="large-progress-fill"
+                                    style="width: 60%;"
+                                ></div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="renewal-box">
+
+                            <span>
+                                Próxima renovación
+                            </span>
+
+                            <strong>
+                                05/10/2026
+                            </strong>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+
+                <!-- =================================
+                     ACCESOS RÁPIDOS
+                ================================== -->
+
+                <section class="quick-section">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h2>
+                                Acciones rápidas
+                            </h2>
+
+                            <p>
+                                Accede rápidamente a las funciones principales
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-grid">
+
+
+                        <button class="quick-card">
+
+                            <span class="quick-icon">
+                                ＋
+                            </span>
+
+                            <strong>
+                                Nueva proforma
+                            </strong>
+
+                            <span>
+                                Crear cotización comercial
+                            </span>
+
+                        </button>
+
+
+                        <button class="quick-card">
+
+                            <span class="quick-icon">
+                                ＋
+                            </span>
+
+                            <strong>
+                                Nuevo informe
+                            </strong>
+
+                            <span>
+                                Crear informe técnico
+                            </span>
+
+                        </button>
+
+
+                        <button class="quick-card">
+
+                            <span class="quick-icon">
+                                ◉
+                            </span>
+
+                            <strong>
+                                Nuevo cliente
+                            </strong>
+
+                            <span>
+                                Registrar cliente
+                            </span>
+
+                        </button>
+
+
+                        <button class="quick-card">
+
+                            <span class="quick-icon">
+                                ↑
+                            </span>
+
+                            <strong>
+            
