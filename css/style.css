@@ -1,31 +1,68 @@
-/* =========================================
+/* =========================================================
    TECNODOC PRO
-   ESTILOS BASE
-========================================= */
+   SISTEMA DE ESTILOS PRINCIPAL
+========================================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+/* =========================================================
+   1. VARIABLES
+========================================================= */
 
 :root {
-    --background: #050b14;
-    --card: #0b1422;
-    --card-border: rgba(255, 255, 255, 0.08);
+
+    --bg-main: #050b14;
+    --bg-secondary: #08111e;
+    --bg-card: #0b1625;
+    --bg-card-hover: #0e1d30;
+
+    --border: rgba(255, 255, 255, 0.08);
 
     --primary: #1677ff;
-    --primary-hover: #0f63d8;
+    --primary-dark: #0d5dcc;
+    --primary-soft: rgba(22, 119, 255, 0.12);
 
-    --text: #ffffff;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+
+    --text: #f8fafc;
     --text-secondary: #94a3b8;
+    --text-muted: #64748b;
 
-    --input: #08111e;
+    --sidebar-width: 255px;
 
-    --radius: 16px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --shadow:
+        0 10px 35px rgba(0, 0, 0, 0.22);
 }
 
+
+/* =========================================================
+   2. RESET
+========================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
 body {
+
     min-height: 100vh;
 
     font-family:
@@ -34,67 +71,123 @@ body {
         Helvetica,
         sans-serif;
 
-    background:
-        radial-gradient(
-            circle at top right,
-            rgba(22, 119, 255, 0.15),
-            transparent 35%
-        ),
-        var(--background);
-
     color: var(--text);
+
+    background: var(--bg-main);
+
 }
 
-/* =========================================
-   LOGIN
-========================================= */
+
+button,
+input,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+
+button {
+
+    border: 0;
+
+}
+
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+
+/* =========================================================
+   3. LOGIN
+========================================================= */
 
 .login-page {
+
     min-height: 100vh;
 
     display: flex;
-    justify-content: center;
+
     align-items: center;
 
+    justify-content: center;
+
     padding: 24px;
+
+    background:
+
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(22, 119, 255, 0.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(0, 82, 180, 0.10),
+            transparent 35%
+        ),
+
+        var(--bg-main);
+
 }
 
+
 .login-card {
+
     width: 100%;
+
     max-width: 430px;
 
-    background: rgba(11, 20, 34, 0.92);
-
-    border: 1px solid var(--card-border);
-
-    border-radius: var(--radius);
-
     padding: 36px;
+
+    background:
+        rgba(11, 22, 37, 0.94);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
 
     box-shadow:
         0 25px 70px rgba(0, 0, 0, 0.45);
 
-    backdrop-filter: blur(20px);
+    backdrop-filter:
+        blur(20px);
+
 }
 
-/* =========================================
-   BRAND
-========================================= */
 
 .brand {
+
     display: flex;
+
     align-items: center;
+
     gap: 14px;
 
     margin-bottom: 40px;
+
 }
 
+
 .brand-icon {
+
     width: 48px;
+
     height: 48px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 12px;
@@ -107,51 +200,62 @@ body {
         );
 
     font-weight: 800;
-    font-size: 15px;
+
 }
+
 
 .brand h1 {
+
     font-size: 21px;
-    font-weight: 700;
+
 }
 
+
 .brand p {
+
     margin-top: 3px;
 
     color: var(--text-secondary);
 
     font-size: 13px;
+
 }
 
-/* =========================================
-   HEADER
-========================================= */
 
 .login-header {
+
     margin-bottom: 28px;
+
 }
+
 
 .login-header h2 {
-    font-size: 28px;
 
     margin-bottom: 8px;
+
+    font-size: 28px;
+
 }
 
+
 .login-header p {
+
     color: var(--text-secondary);
 
     font-size: 14px;
+
 }
 
-/* =========================================
-   FORMULARIO
-========================================= */
 
 .form-group {
+
     margin-bottom: 20px;
+
 }
 
+
 .form-group label {
+
     display: block;
 
     margin-bottom: 8px;
@@ -159,72 +263,73 @@ body {
     font-size: 14px;
 
     font-weight: 600;
+
 }
 
+
 .form-group input {
+
     width: 100%;
 
     height: 48px;
 
-    padding: 0 15px;
-
-    border: 1px solid var(--card-border);
-
-    border-radius: 10px;
-
-    outline: none;
-
-    background: var(--input);
+    padding:
+        0 15px;
 
     color: var(--text);
 
-    font-size: 14px;
+    background: var(--bg-secondary);
 
-    transition: 0.2s;
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-sm);
+
+    outline: none;
+
 }
+
 
 .form-group input:focus {
-    border-color: var(--primary);
+
+    border-color:
+        var(--primary);
 
     box-shadow:
-        0 0 0 3px rgba(22, 119, 255, 0.12);
+        0 0 0 3px
+        rgba(22, 119, 255, 0.12);
+
 }
 
-.form-group input::placeholder {
-    color: #64748b;
-}
-
-/* =========================================
-   OPCIONES
-========================================= */
 
 .login-options {
+
     display: flex;
 
     justify-content: space-between;
 
     align-items: center;
 
-    gap: 10px;
-
     margin-bottom: 24px;
 
+    gap: 10px;
+
     font-size: 13px;
+
 }
+
 
 .login-options a,
 .login-footer a {
+
     color: #4d9aff;
 
-    text-decoration: none;
 }
 
-.login-options a:hover,
-.login-footer a:hover {
-    text-decoration: underline;
-}
 
 .remember {
+
     display: flex;
 
     align-items: center;
@@ -232,99 +337,1493 @@ body {
     gap: 7px;
 
     color: var(--text-secondary);
+
 }
 
-/* =========================================
-   BOTÓN
-========================================= */
 
 .btn-primary {
+
     width: 100%;
 
     height: 48px;
 
-    border: none;
-
-    border-radius: 10px;
-
-    background: var(--primary);
-
     color: white;
 
-    font-size: 14px;
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-dark)
+        );
 
-    font-weight: 700;
+    border-radius:
+        var(--radius-sm);
 
     cursor: pointer;
 
-    transition: 0.2s;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
 }
+
 
 .btn-primary:hover {
-    background: var(--primary-hover);
 
-    transform: translateY(-1px);
+    transform:
+        translateY(-1px);
+
+    box-shadow:
+        0 8px 25px
+        rgba(22, 119, 255, 0.25);
+
 }
 
-.btn-primary:active {
-    transform: translateY(0);
-}
-
-/* =========================================
-   FOOTER
-========================================= */
 
 .login-footer {
+
     margin-top: 26px;
 
     padding-top: 22px;
 
-    border-top:
-        1px solid var(--card-border);
-
     text-align: center;
+
+    border-top:
+        1px solid var(--border);
+
+    color: var(--text-secondary);
 
     font-size: 13px;
 
-    color: var(--text-secondary);
 }
 
-/* =========================================
-   MENSAJES
-========================================= */
 
 .login-message {
+
     margin-top: 18px;
 
     text-align: center;
 
+    color: var(--text-secondary);
+
     font-size: 13px;
 
-    color: #94a3b8;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
 
-@media (max-width: 480px) {
+/* =========================================================
+   4. DASHBOARD — ESTRUCTURA
+========================================================= */
 
-    .login-page {
-        padding: 15px;
-    }
+.dashboard-body {
 
-    .login-card {
-        padding: 26px 20px;
-    }
-
-    .login-header h2 {
-        font-size: 24px;
-    }
-
-    .login-options {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
+    background:
+        var(--bg-main);
 
 }
+
+
+.app-layout {
+
+    min-height: 100vh;
+
+    display: flex;
+
+}
+
+
+/* =========================================================
+   5. SIDEBAR
+========================================================= */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width:
+        var(--sidebar-width);
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 20px 14px;
+
+    background:
+        #07101c;
+
+    border-right:
+        1px solid var(--border);
+
+    z-index: 100;
+
+}
+
+
+/* =========================================================
+   6. LOGO SIDEBAR
+========================================================= */
+
+.sidebar-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        5px 10px 22px;
+
+}
+
+
+.sidebar-brand .brand-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+}
+
+
+.brand-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.brand-text strong {
+
+    font-size: 17px;
+
+}
+
+
+.brand-text span {
+
+    color: #4d9aff;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   7. EMPRESA
+========================================================= */
+
+.company-mini {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        12px;
+
+    margin-bottom:
+        18px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-md);
+
+}
+
+
+.company-avatar {
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background:
+        var(--primary-soft);
+
+    color:
+        #63a7ff;
+
+    border-radius:
+        10px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+.company-mini div:last-child {
+
+    min-width: 0;
+
+}
+
+
+.company-mini strong {
+
+    display: block;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+    font-size: 13px;
+
+}
+
+
+.company-mini span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+}
+
+
+/* =========================================================
+   8. NAVEGACIÓN
+========================================================= */
+
+.sidebar-nav {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+}
+
+
+.nav-title {
+
+    padding:
+        12px 12px 7px;
+
+    color:
+        #4e6077;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.09em;
+
+}
+
+
+.nav-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        10px 12px;
+
+    margin-bottom:
+        3px;
+
+    color:
+        var(--text-secondary);
+
+    border-radius:
+        var(--radius-sm);
+
+    font-size:
+        13px;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s;
+
+}
+
+
+.nav-link:hover {
+
+    color:
+        var(--text);
+
+    background:
+        rgba(255,255,255,0.045);
+
+}
+
+
+.nav-link.active {
+
+    color:
+        white;
+
+    background:
+        var(--primary-soft);
+
+    box-shadow:
+        inset 3px 0 0
+        var(--primary);
+
+}
+
+
+.nav-icon {
+
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+}
+
+
+/* =========================================================
+   9. SIDEBAR INFERIOR
+========================================================= */
+
+.sidebar-bottom {
+
+    padding-top:
+        15px;
+
+}
+
+
+.credits-mini {
+
+    padding:
+        13px;
+
+    margin-bottom:
+        12px;
+
+    background:
+        rgba(22, 119, 255, 0.06);
+
+    border:
+        1px solid
+        rgba(22, 119, 255, 0.12);
+
+    border-radius:
+        var(--radius-md);
+
+}
+
+
+.credits-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom:
+        9px;
+
+    font-size:
+        12px;
+
+}
+
+
+.credits-header span {
+
+    color:
+        var(--text-secondary);
+
+}
+
+
+.credits-header strong {
+
+    color:
+        #63a7ff;
+
+}
+
+
+.credits-bar {
+
+    width: 100%;
+
+    height: 5px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border-radius:
+        20px;
+
+}
+
+
+.credits-progress {
+
+    width: 80%;
+
+    height: 100%;
+
+    background:
+        var(--primary);
+
+    border-radius:
+        20px;
+
+}
+
+
+.credits-mini small {
+
+    display: block;
+
+    margin-top:
+        8px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        10px;
+
+}
+
+
+.logout-button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        10px 12px;
+
+    color:
+        var(--text-secondary);
+
+    background:
+        transparent;
+
+    border-radius:
+        var(--radius-sm);
+
+    cursor: pointer;
+
+    text-align:
+        left;
+
+    font-size:
+        13px;
+
+}
+
+
+.logout-button:hover {
+
+    color:
+        #ff7777;
+
+    background:
+        rgba(239,68,68,0.07);
+
+}
+
+
+/* =========================================================
+   10. CONTENIDO PRINCIPAL
+========================================================= */
+
+.main-content {
+
+    width: calc(
+        100% - var(--sidebar-width)
+    );
+
+    min-height: 100vh;
+
+    margin-left:
+        var(--sidebar-width);
+
+}
+
+
+/* =========================================================
+   11. TOPBAR
+========================================================= */
+
+.topbar {
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        0 30px;
+
+    background:
+        rgba(5, 11, 20, 0.82);
+
+    border-bottom:
+        1px solid var(--border);
+
+    backdrop-filter:
+        blur(15px);
+
+}
+
+
+.topbar-search {
+
+    width:
+        min(400px, 45%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        0 13px;
+
+    height: 38px;
+
+    color:
+        var(--text-muted);
+
+    background:
+        var(--bg-secondary);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-sm);
+
+}
+
+
+.topbar-search input {
+
+    width: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    color:
+        var(--text);
+
+    background:
+        transparent;
+
+    font-size:
+        13px;
+
+}
+
+
+.topbar-search input::placeholder {
+
+    color:
+        var(--text-muted);
+
+}
+
+
+.topbar-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.topbar-button {
+
+    width: 36px;
+
+    height: 36px;
+
+    color:
+        var(--text-secondary);
+
+    background:
+        transparent;
+
+    border-radius:
+        9px;
+
+    cursor:
+        pointer;
+
+    font-size:
+        18px;
+
+}
+
+
+.topbar-button:hover {
+
+    color:
+        var(--text);
+
+    background:
+        rgba(255,255,255,0.05);
+
+}
+
+
+.user-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.user-avatar {
+
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1677ff,
+            #0046a8
+        );
+
+    border-radius:
+        10px;
+
+    font-size:
+        11px;
+
+    font-weight:
+        800;
+
+}
+
+
+.user-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.user-info strong {
+
+    font-size:
+        12px;
+
+}
+
+
+.user-info span {
+
+    margin-top:
+        2px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        10px;
+
+}
+
+
+/* =========================================================
+   12. BOTÓN MENÚ MÓVIL
+========================================================= */
+
+.menu-toggle {
+
+    display: none;
+
+    width: 38px;
+
+    height: 38px;
+
+    color:
+        var(--text);
+
+    background:
+        var(--bg-secondary);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-sm);
+
+    cursor:
+        pointer;
+
+}
+
+
+/* =========================================================
+   13. DASHBOARD CONTENT
+========================================================= */
+
+.dashboard-content {
+
+    max-width:
+        1500px;
+
+    margin:
+        0 auto;
+
+    padding:
+        35px 30px 50px;
+
+}
+
+
+.page-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.eyebrow {
+
+    margin-bottom:
+        8px;
+
+    color:
+        #4d9aff;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.12em;
+
+}
+
+
+.page-heading h1 {
+
+    font-size:
+        clamp(24px, 3vw, 32px);
+
+    line-height:
+        1.2;
+
+}
+
+
+.page-description {
+
+    max-width:
+        650px;
+
+    margin-top:
+        9px;
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.6;
+
+}
+
+
+.heading-actions {
+
+    display:
+        flex;
+
+    gap:
+        10px;
+
+}
+
+
+/* =========================================================
+   14. BOTONES
+========================================================= */
+
+.button {
+
+    min-height:
+        40px;
+
+    padding:
+        0 15px;
+
+    border-radius:
+        var(--radius-sm);
+
+    cursor:
+        pointer;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    transition:
+        0.2s;
+
+}
+
+
+.button-primary {
+
+    color:
+        white;
+
+    background:
+        var(--primary);
+
+}
+
+
+.button-primary:hover {
+
+    background:
+        var(--primary-dark);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.button-secondary {
+
+    color:
+        var(--text);
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid var(--border);
+
+}
+
+
+.button-secondary:hover {
+
+    background:
+        var(--bg-card-hover);
+
+}
+
+
+/* =========================================================
+   15. ESTADÍSTICAS
+========================================================= */
+
+.stats-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        16px;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.stat-card {
+
+    padding:
+        20px;
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        var(--shadow);
+
+    transition:
+        transform 0.2s,
+        border-color 0.2s;
+
+}
+
+
+.stat-card:hover {
+
+    transform:
+        translateY(-2px);
+
+    border-color:
+        rgba(22,119,255,0.25);
+
+}
+
+
+.stat-top {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+.stat-icon {
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        #63a7ff;
+
+    background:
+        var(--primary-soft);
+
+    border-radius:
+        10px;
+
+}
+
+
+.stat-label {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        12px;
+
+}
+
+
+.stat-number {
+
+    display:
+        block;
+
+    font-size:
+        28px;
+
+}
+
+
+.stat-change {
+
+    margin-top:
+        5px;
+
+    color:
+        var(--success);
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   16. GRID PRINCIPAL
+========================================================= */
+
+.dashboard-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        minmax(0, 1.5fr)
+        minmax(300px, 1fr);
+
+    gap:
+        18px;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+/* =========================================================
+   17. PANELES
+========================================================= */
+
+.panel {
+
+    padding:
+        22px;
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-lg);
+
+    box-shadow:
+        var(--shadow);
+
+}
+
+
+.panel-header {
+
+    display:
+        flex;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        space-between;
+
+    gap:
+        15px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.panel-header h2 {
+
+    font-size:
+        15px;
+
+}
+
+
+.panel-header p {
+
+    margin-top:
+        5px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        11px;
+
+}
+
+
+.text-button {
+
+    color:
+        #4d9aff;
+
+    background:
+        transparent;
+
+    cursor:
+        pointer;
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   18. ACTIVIDAD
+========================================================= */
+
+.activity-list {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+}
+
+
+.activity-item {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
+
+    padding:
+        13px 0;
+
+    border-bottom:
+        1px solid var(--border);
+
+}
+
+
+.activity-item:last-child {
+
+    border-bottom:
+        0;
+
+}
+
+
+.activity-icon {
+
+    width:
+        36px;
+
+    height:
+        36px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        9px;
+
+    font-size:
+        10px;
+
+    font-weight:
+        800;
+
+}
+
+
+.activity-icon.proforma {
+
+    color:
+        #69aaff;
+
+    background:
+        var(--primary-soft);
+
+}
+
+
+.activity-icon.informe {
+
+    color:
+        #9ca3ff;
+
+    background:
+        rgba(139,92,246,0.12);
+
+}
+
+
+.activity-info {
+
+    min-width:
+        0;
+
+    flex:
+        1;
+
+}
+
+
+.activity-info strong {
+
+    display:
+        block;
+
+    font-size:
+        12px;
+
+}
+
+
+.activity-info span {
+
+    display:
+        block;
+
+    overflow:
+        hidden;
+
+    margin-top:
+        4px;
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        10px;
+
+    text-overflow:
+        ellipsis;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.activity-value {
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        11px;
+
+}
+
+
+/* =========================================================
+   19. CRÉDITOS
+========================================================= */
+
+.credit-block {
+
+    margin-bottom:
+        23px;
+
+}
+
+
+.credit-row {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        9px;
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        12px;
+
+}
+
+
+.credit-row strong {
+
+    color:
+        var(--text);
+
+}
+
+
+.large-progress {
+
+    width:
+        100%;
+
+    height:
+        8px;
+
+    overflow:
+        hidden;
+
+    background:
+        rgba(255,255,255,0.06);
+
+    border-radius:
+        20px;
+
+}
+
+
+.large-progress-fill {
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1677ff,
+            #48a0ff
+        );
+
+    border-radius:
+        20px;
+
+}
+
+
+.renewal-box {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    padding:
+        13px;
+
+    background:
+        rgba(255,255,255,0.025);
+
+    border:
+        1px solid var(--border);
+
+    border-radius:
+        var(--radius-md);
+
+}
+
+
+.renewal-box span {
+
+    color:
+        var(--text-muted);
+
+    font-size:
+        11px;
+
+}
+
+
+.renewal-box strong {
+
+    color:
+        var(--text-secondary);
+
+    font-size:
+        11px;
+
+}
+
+
+/* =============================
