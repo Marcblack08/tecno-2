@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TecnoDoc Pro - Configuración</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo-icon">
+                TD
+            </div>
+
+            <div>
+                <h2>TecnoDoc</h2>
+                <span>PRO</span>
+            </div>
+
+        </div>
+
+
+        <div class="company-card">
+
+            <strong>
+                Mi Empresa
+            </strong>
+
+            <small>
+                Cuenta empresarial
+            </small>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                📊
+                <span>Dashboard</span>
+            </a>
+
+            <a href="clientes.html">
+                👥
+                <span>Clientes</span>
+            </a>
+
+            <a href="proformas.html">
+                📄
+                <span>Proformas</span>
+            </a>
+
+            <a href="informes.html">
+                🛠️
+                <span>Informes técnicos</span>
+            </a>
+
+            <a href="almacen.html">
+                📁
+                <span>Almacén</span>
+            </a>
+
+            <a href="productos.html">
+                📦
+                <span>Productos</span>
+            </a>
+
+            <a href="#">
+                🕘
+                <span>Historial</span>
+            </a>
+
+            <a href="configuracion.html" class="active">
+                ⚙️
+                <span>Configuración</span>
+            </a>
+
+        </nav>
+
+
+        <div class="credits-box">
+
+            <strong>
+                Créditos
+            </strong>
+
+            <div class="credit-number">
+                16 / 20
+            </div>
+
+            <div class="credit-bar">
+
+                <div class="credit-progress"></div>
+
+            </div>
+
+            <small>
+                Renovación: 05/10/2026
+            </small>
+
+        </div>
+
+
+        <button
+            class="logout-button"
+            id="logoutButton"
+        >
+            🚪 Cerrar sesión
+        </button>
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button
+                id="menuToggle"
+                class="menu-toggle"
+            >
+                ☰
+            </button>
+
+
+            <div class="search-box">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Buscar..."
+                >
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    M
+                </div>
+
+                <div>
+
+                    <strong>
+                        Usuario
+                    </strong>
+
+                    <small>
+                        Administrador
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+        <section class="dashboard-content">
+
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        SISTEMA
+                    </span>
+
+                    <h1>
+                        Configuración
+                    </h1>
+
+                    <p>
+                        Configura la información de tu empresa y tus documentos.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMACIÓN DE EMPRESA -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            🏢 Información de la empresa
+                        </h2>
+
+                        <p>
+                            Datos que aparecerán en tus proformas e informes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Nombre comercial
+                        </label>
+
+                        <input
+                            type="text"
+                            value="Mi Empresa"
+                            placeholder="Nombre comercial"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Razón social
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Razón social"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            RUC / Documento fiscal
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="RUC"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="Teléfono"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="correo@empresa.com"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Sitio web
+                        </label>
+
+                        <input
+                            type="url"
+                            placeholder="https://empresa.com"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group form-full">
+
+                        <label>
+                            Dirección
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Dirección de la empresa"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONFIGURACIÓN DE DOCUMENTOS -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            📄 Documentos
+                        </h2>
+
+                        <p>
+                            Personaliza la generación de proformas e informes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Moneda
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Sol peruano (S/)
+                            </option>
+
+                            <option>
+                                Dólar estadounidense (USD)
+                            </option>
+
+                            <option>
+                                Euro (EUR)
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            IGV (%)
+                        </label>
+
+                        <input
+                            type="number"
+                            value="18"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Prefijo de proformas
+                        </label>
+
+                        <input
+                            type="text"
+                            value="PRF"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Prefijo de informes
+                        </label>
+
+                        <input
+                            type="text"
+                            value="INF"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group form-full">
+
+                        <label>
+                            Términos y condiciones
+                        </label>
+
+                        <textarea
+                            rows="5"
+                            placeholder="Escribe aquí los términos y condiciones que aparecerán en tus documentos..."
+                        ></textarea>
+
+                    </div>
+
+
+                    <div class="form-group form-full">
+
+                        <label>
+                            Pie de página
+                        </label>
+
+                        <textarea
+                            rows="3"
+                            placeholder="Información que aparecerá al final de tus documentos..."
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DATOS BANCARIOS -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            🏦 Información bancaria
+                        </h2>
+
+                        <p>
+                            Datos que podrán aparecer en tus proformas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Banco
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Nombre del banco"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Número de cuenta
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Número de cuenta"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Cuenta interbancaria
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="CCI"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Titular
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Titular de la cuenta"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- REPRESENTANTE -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            👤 Representante
+                        </h2>
+
+                        <p>
+                            Información del responsable de la empresa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Nombre completo
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Nombre del representante"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Cargo
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Cargo"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Correo
+                        </label>
+
+                        <input
+                            type="email"
+                            placeholder="representante@empresa.com"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="tel"
+                            placeholder="Teléfono"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTÓN GUARDAR -->
+            <div class="settings-actions">
+
+                <button
+                    class="primary-button"
+                    id="saveSettingsButton"
+                >
+                    Guardar configuración
+                </button>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
