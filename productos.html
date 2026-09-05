@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TecnoDoc Pro - Productos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo-icon">
+                TD
+            </div>
+
+            <div>
+                <h2>TecnoDoc</h2>
+                <span>PRO</span>
+            </div>
+
+        </div>
+
+
+        <div class="company-card">
+
+            <strong>
+                Mi Empresa
+            </strong>
+
+            <small>
+                Cuenta empresarial
+            </small>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                📊
+                <span>Dashboard</span>
+            </a>
+
+            <a href="clientes.html">
+                👥
+                <span>Clientes</span>
+            </a>
+
+            <a href="proformas.html">
+                📄
+                <span>Proformas</span>
+            </a>
+
+            <a href="informes.html">
+                🛠️
+                <span>Informes técnicos</span>
+            </a>
+
+            <a href="almacen.html">
+                📁
+                <span>Almacén</span>
+            </a>
+
+            <a href="productos.html" class="active">
+                📦
+                <span>Productos</span>
+            </a>
+
+            <a href="#">
+                🕘
+                <span>Historial</span>
+            </a>
+
+            <a href="configuracion.html">
+                ⚙️
+                <span>Configuración</span>
+            </a>
+
+        </nav>
+
+
+        <div class="credits-box">
+
+            <strong>
+                Créditos
+            </strong>
+
+            <div class="credit-number">
+                16 / 20
+            </div>
+
+            <div class="credit-bar">
+
+                <div class="credit-progress"></div>
+
+            </div>
+
+            <small>
+                Renovación: 05/10/2026
+            </small>
+
+        </div>
+
+
+        <button
+            class="logout-button"
+            id="logoutButton"
+        >
+            🚪 Cerrar sesión
+        </button>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button
+                id="menuToggle"
+                class="menu-toggle"
+            >
+                ☰
+            </button>
+
+
+            <div class="search-box">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Buscar productos..."
+                >
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    M
+                </div>
+
+                <div>
+
+                    <strong>
+                        Usuario
+                    </strong>
+
+                    <small>
+                        Administrador
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+        <section class="dashboard-content">
+
+
+            <!-- ENCABEZADO -->
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        INVENTARIO
+                    </span>
+
+                    <h1>
+                        Productos
+                    </h1>
+
+                    <p>
+                        Administra equipos, materiales, precios y existencias.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    id="newProductButton"
+                >
+                    + Nuevo producto
+                </button>
+
+            </div>
+
+
+            <!-- ESTADÍSTICAS -->
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <span>
+                        📦
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Productos
+                        </small>
+
+                        <strong>
+                            356
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        📹
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Equipos CCTV
+                        </small>
+
+                        <strong>
+                            142
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        🌐
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Redes
+                        </small>
+
+                        <strong>
+                            87
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        ⚠️
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Bajo stock
+                        </small>
+
+                        <strong>
+                            9
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FILTROS -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Catálogo de productos
+                        </h2>
+
+                        <p>
+                            Busca y administra los productos registrados.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="product-filters">
+
+                    <input
+                        type="text"
+                        class="table-search"
+                        placeholder="Buscar por código, marca o modelo..."
+                    >
+
+
+                    <select class="table-search">
+
+                        <option value="">
+                            Todas las categorías
+                        </option>
+
+                        <option>
+                            CCTV
+                        </option>
+
+                        <option>
+                            Redes
+                        </option>
+
+                        <option>
+                            Computación
+                        </option>
+
+                        <option>
+                            Accesorios
+                        </option>
+
+                        <option>
+                            Otros
+                        </option>
+
+                    </select>
+
+
+                    <select class="table-search">
+
+                        <option value="">
+                            Todos los estados
+                        </option>
+
+                        <option>
+                            Disponible
+                        </option>
+
+                        <option>
+                            Bajo stock
+                        </option>
+
+                        <option>
+                            Agotado
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- TABLA -->
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Código
+                                </th>
+
+                                <th>
+                                    Producto
+                                </th>
+
+                                <th>
+                                    Marca / Modelo
+                                </th>
+
+                                <th>
+                                    Categoría
+                                </th>
+
+                                <th>
+                                    Precio venta
+                                </th>
+
+                                <th>
+                                    Stock
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        PRD-0001
+                                    </strong>
+                                </td>
+
+
+                                <td>
+
+                                    <strong>
+                                        Cámara IP
+                                    </strong>
+
+                                    <small>
+                                        4 MP ColorVu
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+                                    Hikvision / DS-2CD2347G2
+                                </td>
+
+
+                                <td>
+                                    CCTV
+                                </td>
+
+
+                                <td>
+                                    <strong>
+                                        S/ 485.00
+                                    </strong>
+                                </td>
+
+
+                                <td>
+                                    24
+                                </td>
+
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        PRD-0002
+                                    </strong>
+                                </td>
+
+
+                                <td>
+
+                                    <strong>
+                                        NVR 8 canales
+                                    </strong>
+
+                                    <small>
+                                        Grabador IP
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+                                    Hikvision / DS-7608NXI
+                                </td>
+
+
+                                <td>
+                                    CCTV
+                                </td>
+
+
+                                <td>
+                                    <strong>
+                                        S/ 920.00
+                                    </strong>
+                                </td>
+
+
+                                <td>
+                                    8
+                                </td>
+
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        PRD-0003
+                                    </strong>
+                                </td>
+
+
+                                <td>
+
+                                    <strong>
+                                        Switch Gigabit
+                                    </strong>
+
+                                    <small>
+                                        24 puertos
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+                                    TP-Link / TL-SG1024
+                                </td>
+
+
+                                <td>
+                                    Redes
+                                </td>
+
+
+                                <td>
+                                    <strong>
+                                        S/ 580.00
+                                    </strong>
+                                </td>
+
+
+                                <td>
+                                    3
+                                </td>
+
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        PRD-0004
+                                    </strong>
+                                </td>
+
+
+                                <td>
+
+                                    <strong>
+                                        Cable UTP Cat6
+                                    </strong>
+
+                                    <small>
+                                        Caja 305 metros
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+                                    Nexxt / Cat6
+                                </td>
+
+
+                                <td>
+                                    Redes
+                                </td>
+
+
+                                <td>
+                                    <strong>
+                                        S/ 420.00
+                                    </strong>
+
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge">
+                                        Bajo stock
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMACIÓN DEL PRODUCTO -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Información que podremos almacenar
+                        </h2>
+
+                        <p>
+                            Cada producto tendrá una ficha completa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            🔢
+                        </span>
+
+                        <strong>
+                            Código
+                        </strong>
+
+                        <small>
+                            Identificador interno
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            🏷️
+                        </span>
+
+                        <strong>
+                            Marca y modelo
+                        </strong>
+
+                        <small>
+                            Fabricante y número de modelo
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            💰
+                        </span>
+
+                        <strong>
+                            Precios
+                        </strong>
+
+                        <small>
+                            Compra y venta
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            📊
+                        </span>
+
+                        <strong>
+                            Inventario
+                        </strong>
+
+                        <small>
+                            Stock y disponibilidad
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            📚
+                        </span>
+
+                        <strong>
+                            Ficha técnica
+                        </strong>
+
+                        <small>
+                            PDF y documentación
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            🖼️
+                        </span>
+
+                        <strong>
+                            Fotografías
+                        </strong>
+
+                        <small>
+                            Imágenes del producto
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
