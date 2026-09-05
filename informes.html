@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TecnoDoc Pro - Informes Técnicos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo-icon">TD</div>
+
+            <div>
+                <h2>TecnoDoc</h2>
+                <span>PRO</span>
+            </div>
+        </div>
+
+        <div class="company-card">
+            <strong>Mi Empresa</strong>
+            <small>Cuenta empresarial</small>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                📊
+                <span>Dashboard</span>
+            </a>
+
+            <a href="clientes.html">
+                👥
+                <span>Clientes</span>
+            </a>
+
+            <a href="proformas.html">
+                📄
+                <span>Proformas</span>
+            </a>
+
+            <a href="informes.html" class="active">
+                🛠️
+                <span>Informes técnicos</span>
+            </a>
+
+            <a href="almacen.html">
+                📁
+                <span>Almacén</span>
+            </a>
+
+            <a href="productos.html">
+                📦
+                <span>Productos</span>
+            </a>
+
+            <a href="#">
+                🕘
+                <span>Historial</span>
+            </a>
+
+            <a href="configuracion.html">
+                ⚙️
+                <span>Configuración</span>
+            </a>
+
+        </nav>
+
+        <div class="credits-box">
+
+            <strong>Créditos</strong>
+
+            <div class="credit-number">
+                16 / 20
+            </div>
+
+            <div class="credit-bar">
+                <div class="credit-progress"></div>
+            </div>
+
+            <small>
+                Renovación: 05/10/2026
+            </small>
+
+        </div>
+
+        <button class="logout-button" id="logoutButton">
+            🚪 Cerrar sesión
+        </button>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button id="menuToggle" class="menu-toggle">
+                ☰
+            </button>
+
+            <div class="search-box">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Buscar..."
+                >
+
+            </div>
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    M
+                </div>
+
+                <div>
+                    <strong>Usuario</strong>
+                    <small>Administrador</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+        <section class="dashboard-content">
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        DOCUMENTACIÓN TÉCNICA
+                    </span>
+
+                    <h1>Informes técnicos</h1>
+
+                    <p>
+                        Crea, administra y consulta informes técnicos de tus trabajos.
+                    </p>
+
+                </div>
+
+                <button
+                    class="primary-button"
+                    id="newReportButton"
+                >
+                    + Nuevo informe
+                </button>
+
+            </div>
+
+
+            <!-- ESTADÍSTICAS -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <span>🛠️</span>
+
+                    <div>
+
+                        <small>
+                            Informes totales
+                        </small>
+
+                        <strong>
+                            86
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>📅</span>
+
+                    <div>
+
+                        <small>
+                            Este mes
+                        </small>
+
+                        <strong>
+                            12
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>✅</span>
+
+                    <div>
+
+                        <small>
+                            Finalizados
+                        </small>
+
+                        <strong>
+                            71
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>⏳</span>
+
+                    <div>
+
+                        <small>
+                            Pendientes
+                        </small>
+
+                        <strong>
+                            15
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLA DE INFORMES -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Informes recientes
+                        </h2>
+
+                        <p>
+                            Historial de informes técnicos realizados.
+                        </p>
+
+                    </div>
+
+                    <input
+                        type="text"
+                        class="table-search"
+                        placeholder="Buscar informe..."
+                    >
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Número</th>
+                                <th>Cliente</th>
+                                <th>Tipo de trabajo</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        INF-0001
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        Condominio Los Álamos
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Mantenimiento CCTV
+                                </td>
+
+                                <td>
+                                    05/09/2026
+                                </td>
+
+                                <td>
+
+                                    <span class="status-badge">
+                                        Finalizado
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        INF-0002
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        Empresa Tecnológica SAC
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Diagnóstico de red
+                                </td>
+
+                                <td>
+                                    04/09/2026
+                                </td>
+
+                                <td>
+
+                                    <span class="status-badge">
+                                        Finalizado
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>
+                                        INF-0003
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    <strong>
+                                        Juan Pérez
+                                    </strong>
+                                </td>
+
+                                <td>
+                                    Reparación de equipo
+                                </td>
+
+                                <td>
+                                    03/09/2026
+                                </td>
+
+                                <td>
+
+                                    <span class="status-badge">
+                                        Pendiente
+                                    </span>
+
+                                </td>
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- CRÉDITOS -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Créditos de informes
+                        </h2>
+
+                        <p>
+                            Uso disponible durante el periodo actual.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        6 / 10
+                    </strong>
+
+                </div>
+
+
+                <div class="credit-bar">
+
+                    <div
+                        class="credit-progress"
+                        style="width: 60%;"
+                    ></div>
+
+                </div>
+
+                <small>
+                    Has utilizado 6 de 10 informes técnicos disponibles.
+                </small>
+
+            </div>
+
+
+            <!-- TIPOS DE INFORME -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Tipos de informes
+                        </h2>
+
+                        <p>
+                            Plantillas que posteriormente podremos personalizar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+                    <div class="quick-card">
+
+                        <span>
+                            📹
+                        </span>
+
+                        <strong>
+                            CCTV
+                        </strong>
+
+                        <small>
+                            Instalación y mantenimiento
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            🌐
+                        </span>
+
+                        <strong>
+                            Redes
+                        </strong>
+
+                        <small>
+                            Diagnóstico y configuración
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            💻
+                        </span>
+
+                        <strong>
+                            Computación
+                        </strong>
+
+                        <small>
+                            Reparación y mantenimiento
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            🔧
+                        </span>
+
+                        <strong>
+                            General
+                        </strong>
+
+                        <small>
+                            Otros trabajos técnicos
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+                                  </html>
