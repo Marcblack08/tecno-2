@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TecnoDoc Pro - Almacén</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="logo-icon">
+                TD
+            </div>
+
+            <div>
+                <h2>TecnoDoc</h2>
+                <span>PRO</span>
+            </div>
+
+        </div>
+
+
+        <div class="company-card">
+
+            <strong>
+                Mi Empresa
+            </strong>
+
+            <small>
+                Cuenta empresarial
+            </small>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                📊
+                <span>Dashboard</span>
+            </a>
+
+            <a href="clientes.html">
+                👥
+                <span>Clientes</span>
+            </a>
+
+            <a href="proformas.html">
+                📄
+                <span>Proformas</span>
+            </a>
+
+            <a href="informes.html">
+                🛠️
+                <span>Informes técnicos</span>
+            </a>
+
+            <a href="almacen.html" class="active">
+                📁
+                <span>Almacén</span>
+            </a>
+
+            <a href="productos.html">
+                📦
+                <span>Productos</span>
+            </a>
+
+            <a href="#">
+                🕘
+                <span>Historial</span>
+            </a>
+
+            <a href="configuracion.html">
+                ⚙️
+                <span>Configuración</span>
+            </a>
+
+        </nav>
+
+
+        <div class="credits-box">
+
+            <strong>
+                Créditos
+            </strong>
+
+            <div class="credit-number">
+                16 / 20
+            </div>
+
+            <div class="credit-bar">
+
+                <div class="credit-progress"></div>
+
+            </div>
+
+            <small>
+                Renovación: 05/10/2026
+            </small>
+
+        </div>
+
+
+        <button
+            class="logout-button"
+            id="logoutButton"
+        >
+            🚪 Cerrar sesión
+        </button>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button
+                id="menuToggle"
+                class="menu-toggle"
+            >
+                ☰
+            </button>
+
+
+            <div class="search-box">
+
+                🔍
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Buscar documentos..."
+                >
+
+            </div>
+
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    M
+                </div>
+
+                <div>
+
+                    <strong>
+                        Usuario
+                    </strong>
+
+                    <small>
+                        Administrador
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+        <section class="dashboard-content">
+
+
+            <!-- ENCABEZADO -->
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        GESTIÓN DOCUMENTAL
+                    </span>
+
+                    <h1>
+                        Almacén digital
+                    </h1>
+
+                    <p>
+                        Centraliza, organiza y analiza tus documentos técnicos y comerciales.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    id="uploadDocumentButton"
+                >
+                    + Subir documento
+                </button>
+
+            </div>
+
+
+            <!-- ESTADÍSTICAS -->
+            <div class="stats-grid">
+
+
+                <div class="stat-card">
+
+                    <span>
+                        📁
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Documentos
+                        </small>
+
+                        <strong>
+                            248
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        📄
+                    </span>
+
+                    <div>
+
+                        <small>
+                            PDFs
+                        </small>
+
+                        <strong>
+                            126
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        🖼️
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Fotografías
+                        </small>
+
+                        <strong>
+                            94
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        🎙️
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Audios
+                        </small>
+
+                        <strong>
+                            28
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ZONA DE SUBIDA -->
+            <div class="content-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Subir documentos
+                        </h2>
+
+                        <p>
+                            Agrega archivos para almacenarlos y analizarlos posteriormente.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="upload-zone">
+
+                    <div class="upload-icon">
+                        ☁️
+                    </div>
+
+
+                    <h3>
+                        Arrastra tus archivos aquí
+                    </h3>
+
+
+                    <p>
+                        o selecciona archivos desde tu dispositivo
+                    </p>
+
+
+                    <button
+                        class="primary-button"
+                        id="selectFilesButton"
+                    >
+                        Seleccionar archivos
+                    </button>
+
+
+                    <small>
+                        PDF, JPG, PNG, DOCX, XLSX, MP3, WAV
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORÍAS -->
+            <div class="content-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Categorías
+                        </h2>
+
+                        <p>
+                            Organiza tus documentos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            📄
+                        </span>
+
+                        <strong>
+                            Proformas
+                        </strong>
+
+                        <small>
+                            Cotizaciones y presupuestos
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            🛠️
+                        </span>
+
+                        <strong>
+                            Informes técnicos
+                        </strong>
+
+                        <small>
+                            Informes y diagnósticos
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            📚
+                        </span>
+
+                        <strong>
+                            Catálogos
+                        </strong>
+
+                        <small>
+                            Manuales y fichas técnicas
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            💰
+                        </span>
+
+                        <strong>
+                            Precios
+                        </strong>
+
+                        <small>
+                            Listas de precios y proveedores
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- DOCUMENTOS RECIENTES -->
+            <div class="content-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            Documentos recientes
+                        </h2>
+
+                        <p>
+                            Últimos archivos agregados al almacén.
+                        </p>
+
+                    </div>
+
+
+                    <input
+                        type="text"
+                        class="table-search"
+                        placeholder="Buscar documento..."
+                    >
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    Documento
+                                </th>
+
+                                <th>
+                                    Tipo
+                                </th>
+
+                                <th>
+                                    Cliente
+                                </th>
+
+                                <th>
+                                    Fecha
+                                </th>
+
+                                <th>
+                                    Análisis IA
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Catalogo_CCTV_2026.pdf
+                                    </strong>
+
+                                    <small>
+                                        8.4 MB
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+                                    📄 PDF
+                                </td>
+
+
+                                <td>
+                                    General
+                                </td>
+
+
+                                <td>
+                                    05/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge">
+                                        Analizado
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Analizar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Lista_Precios_Hikvision.pdf
+                                    </strong>
+
+                                    <small>
+                                        4.7 MB
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+                                    📄 PDF
+                                </td>
+
+
+                                <td>
+                                    General
+                                </td>
+
+
+                                <td>
+                                    04/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge">
+                                        Analizado
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Analizar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+
+                                    <strong>
+                                        Instalacion_Camara.jpg
+                                    </strong>
+
+                                    <small>
+                                        2.1 MB
+                                    </small>
+
+                                </td>
+
+
+                                <td>
+                                    🖼️ Imagen
+                                </td>
+
+
+                                <td>
+                                    Condominio Los Álamos
+                                </td>
+
+
+                                <td>
+                                    03/09/2026
+                                </td>
+
+
+                                <td>
+
+                                    <span class="status-badge">
+                                        Pendiente
+                                    </span>
+
+                                </td>
+
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Analizar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- FUNCIÓN IA -->
+            <div class="content-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>
+                            🤖 Análisis inteligente
+                        </h2>
+
+                        <p>
+                            Posteriormente conectaremos esta sección con la IA.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            🔎
+                        </span>
+
+                        <strong>
+                            Extraer productos
+                        </strong>
+
+                        <small>
+                            Detectar modelos y cantidades
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            💰
+                        </span>
+
+                        <strong>
+                            Detectar precios
+                        </strong>
+
+                        <small>
+                            Extraer precios encontrados
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            📋
+                        </span>
+
+                        <strong>
+                            Crear inventario
+                        </strong>
+
+                        <small>
+                            Convertir información en productos
+                        </small>
+
+                    </div>
+
+
+                    <div class="quick-card">
+
+                        <span>
+                            💬
+                        </span>
+
+                        <strong>
+                            Preguntar al documento
+                        </strong>
+
+                        <small>
+                            Buscar información específica
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
