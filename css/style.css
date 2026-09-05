@@ -1,0 +1,330 @@
+/* =========================================
+   TECNODOC PRO
+   ESTILOS BASE
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #050b14;
+    --card: #0b1422;
+    --card-border: rgba(255, 255, 255, 0.08);
+
+    --primary: #1677ff;
+    --primary-hover: #0f63d8;
+
+    --text: #ffffff;
+    --text-secondary: #94a3b8;
+
+    --input: #08111e;
+
+    --radius: 16px;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(22, 119, 255, 0.15),
+            transparent 35%
+        ),
+        var(--background);
+
+    color: var(--text);
+}
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 430px;
+
+    background: rgba(11, 20, 34, 0.92);
+
+    border: 1px solid var(--card-border);
+
+    border-radius: var(--radius);
+
+    padding: 36px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(20px);
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 40px;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1677ff,
+            #0046a8
+        );
+
+    font-weight: 800;
+    font-size: 15px;
+}
+
+.brand h1 {
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.brand p {
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.login-header {
+    margin-bottom: 28px;
+}
+
+.login-header h2 {
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+}
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+
+    height: 48px;
+
+    padding: 0 15px;
+
+    border: 1px solid var(--card-border);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: var(--input);
+
+    color: var(--text);
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+
+    box-shadow:
+        0 0 0 3px rgba(22, 119, 255, 0.12);
+}
+
+.form-group input::placeholder {
+    color: #64748b;
+}
+
+/* =========================================
+   OPCIONES
+========================================= */
+
+.login-options {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 24px;
+
+    font-size: 13px;
+}
+
+.login-options a,
+.login-footer a {
+    color: #4d9aff;
+
+    text-decoration: none;
+}
+
+.login-options a:hover,
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+.remember {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--text-secondary);
+}
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.btn-primary {
+    width: 100%;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+
+    transform: translateY(-1px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.login-footer {
+    margin-top: 26px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid var(--card-border);
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: var(--text-secondary);
+}
+
+/* =========================================
+   MENSAJES
+========================================= */
+
+.login-message {
+    margin-top: 18px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #94a3b8;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .login-page {
+        padding: 15px;
+    }
+
+    .login-card {
+        padding: 26px 20px;
+    }
+
+    .login-header h2 {
+        font-size: 24px;
+    }
+
+    .login-options {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
