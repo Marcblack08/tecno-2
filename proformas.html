@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TecnoDoc Pro - Proformas</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA LATERAL -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <div class="logo-icon">TD</div>
+
+            <div>
+                <h2>TecnoDoc</h2>
+                <span>PRO</span>
+            </div>
+        </div>
+
+        <div class="company-card">
+            <strong>Mi Empresa</strong>
+            <small>Cuenta empresarial</small>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                📊
+                <span>Dashboard</span>
+            </a>
+
+            <a href="clientes.html">
+                👥
+                <span>Clientes</span>
+            </a>
+
+            <a href="proformas.html" class="active">
+                📄
+                <span>Proformas</span>
+            </a>
+
+            <a href="informes.html">
+                🛠️
+                <span>Informes técnicos</span>
+            </a>
+
+            <a href="almacen.html">
+                📁
+                <span>Almacén</span>
+            </a>
+
+            <a href="productos.html">
+                📦
+                <span>Productos</span>
+            </a>
+
+            <a href="#">
+                🕘
+                <span>Historial</span>
+            </a>
+
+            <a href="configuracion.html">
+                ⚙️
+                <span>Configuración</span>
+            </a>
+
+        </nav>
+
+        <div class="credits-box">
+            <strong>Créditos</strong>
+
+            <div class="credit-number">
+                16 / 20
+            </div>
+
+            <div class="credit-bar">
+                <div class="credit-progress"></div>
+            </div>
+
+            <small>Renovación: 05/10/2026</small>
+        </div>
+
+        <button class="logout-button" id="logoutButton">
+            🚪 Cerrar sesión
+        </button>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <button id="menuToggle" class="menu-toggle">
+                ☰
+            </button>
+
+            <div class="search-box">
+                🔍
+
+                <input
+                    type="text"
+                    id="globalSearch"
+                    placeholder="Buscar..."
+                >
+            </div>
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    M
+                </div>
+
+                <div>
+                    <strong>Usuario</strong>
+                    <small>Administrador</small>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENIDO -->
+        <section class="dashboard-content">
+
+            <div class="page-header">
+
+                <div>
+
+                    <span class="page-label">
+                        DOCUMENTOS COMERCIALES
+                    </span>
+
+                    <h1>Proformas</h1>
+
+                    <p>
+                        Crea, administra y consulta tus cotizaciones comerciales.
+                    </p>
+
+                </div>
+
+                <button class="primary-button" id="newProformaButton">
+                    + Nueva proforma
+                </button>
+
+            </div>
+
+
+            <!-- ESTADÍSTICAS -->
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <span>📄</span>
+
+                    <div>
+                        <small>Proformas totales</small>
+                        <strong>128</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>📅</span>
+
+                    <div>
+                        <small>Este mes</small>
+                        <strong>18</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>💰</span>
+
+                    <div>
+                        <small>Ventas cotizadas</small>
+                        <strong>S/ 48,520</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>⏳</span>
+
+                    <div>
+                        <small>Pendientes</small>
+                        <strong>7</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TABLA -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Proformas recientes</h2>
+
+                        <p>
+                            Gestiona tus cotizaciones comerciales.
+                        </p>
+
+                    </div>
+
+                    <input
+                        type="text"
+                        class="table-search"
+                        placeholder="Buscar proforma..."
+                    >
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Número</th>
+                                <th>Cliente</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                                <th>Total</th>
+                                <th>Acciones</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <strong>PRF-0001</strong>
+                                </td>
+
+                                <td>
+                                    <strong>Condominio Los Álamos</strong>
+                                </td>
+
+                                <td>
+                                    05/09/2026
+                                </td>
+
+                                <td>
+                                    <span class="status-badge">
+                                        Pendiente
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <strong>S/ 12,850.00</strong>
+                                </td>
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>PRF-0002</strong>
+                                </td>
+
+                                <td>
+                                    <strong>Empresa Tecnológica SAC</strong>
+                                </td>
+
+                                <td>
+                                    04/09/2026
+                                </td>
+
+                                <td>
+                                    <span class="status-badge">
+                                        Aprobada
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <strong>S/ 8,450.00</strong>
+                                </td>
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <strong>PRF-0003</strong>
+                                </td>
+
+                                <td>
+                                    <strong>Juan Pérez</strong>
+                                </td>
+
+                                <td>
+                                    03/09/2026
+                                </td>
+
+                                <td>
+                                    <span class="status-badge">
+                                        Enviada
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <strong>S/ 3,250.00</strong>
+                                </td>
+
+                                <td>
+
+                                    <button class="table-button">
+                                        Ver
+                                    </button>
+
+                                    <button class="table-button">
+                                        Editar
+                                    </button>
+
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+            <!-- INFORMACIÓN DE CRÉDITOS -->
+            <div class="content-card">
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h2>Créditos de proformas</h2>
+
+                        <p>
+                            Uso disponible durante el periodo actual.
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        8 / 10
+                    </strong>
+
+                </div>
+
+
+                <div class="credit-bar">
+
+                    <div
+                        class="credit-progress"
+                        style="width: 80%;"
+                    ></div>
+
+                </div>
+
+                <small>
+                    Has utilizado 8 de 10 proformas disponibles.
+                </small>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
