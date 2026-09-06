@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoDoc Pro - Recuperar contraseña</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="login-page">
+<section class="login-card">
+    <div class="brand"><div class="brand-icon">TD</div><div><h1>TecnoDoc Pro</h1><p>Gestión empresarial inteligente</p></div></div>
+    <div class="login-header"><h2>Recuperar contraseña</h2><p>Te enviaremos un enlace para restablecerla</p></div>
+    <form id="recoveryForm" novalidate>
+        <div class="form-group"><label for="recoveryEmail">Correo electrónico</label><input id="recoveryEmail" type="email" autocomplete="email" placeholder="correo@empresa.com" required></div>
+        <button type="submit" class="btn-primary" id="recoveryButton">Enviar enlace</button>
+    </form>
+    <div class="login-footer"><p><a href="index.html">Volver a iniciar sesión</a></p></div>
+    <div id="recoveryMessage" class="login-message" role="alert" aria-live="polite"></div>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
