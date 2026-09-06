@@ -13,17 +13,12 @@
         <section class="login-card">
             <div class="brand">
                 <div class="brand-icon">TD</div>
-                <div>
-                    <h1>TecnoDoc Pro</h1>
-                    <p>Gestión empresarial inteligente</p>
-                </div>
+                <div><h1>TecnoDoc Pro</h1><p>Gestión empresarial inteligente</p></div>
             </div>
-
             <div class="login-header">
                 <h2>Iniciar sesión</h2>
                 <p>Accede a tu espacio empresarial</p>
             </div>
-
             <form id="loginForm" novalidate>
                 <div class="form-group">
                     <label for="email">Correo electrónico</label>
@@ -34,24 +29,17 @@
                     <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" required>
                 </div>
                 <div class="login-options">
-                    <label class="remember">
-                        <input type="checkbox" id="remember">
-                        <span>Recordarme</span>
-                    </label>
+                    <label class="remember"><input type="checkbox" id="remember"><span>Recordarme</span></label>
                     <a href="recuperar.html">¿Olvidaste tu contraseña?</a>
                 </div>
                 <button type="submit" class="btn-primary" id="loginButton">Iniciar sesión</button>
             </form>
-
-            <div class="login-footer">
-                <p>¿No tienes una cuenta? <a href="registro.html">Crear cuenta</a></p>
-            </div>
+            <div class="login-footer"><p>¿No tienes una cuenta? <a href="registro.html">Crear cuenta</a></p></div>
             <div id="loginMessage" class="login-message" role="alert" aria-live="polite"></div>
         </section>
     </main>
-
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="js/supabase.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
