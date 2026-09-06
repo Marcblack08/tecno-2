@@ -1,7 +1,7 @@
 /* =========================================================
    TECNODOC PRO
    JAVASCRIPT PRINCIPAL
-   FASE 2 - INTERACTIVIDAD
+   FASE 3 - SUPABASE AUTH
 ========================================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -24,6 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const globalSearch =
         document.getElementById("globalSearch");
 
+    const loginForm =
+        document.getElementById("loginForm");
+
+    const loginMessage =
+        document.getElementById("loginMessage");
+
 
     /* =====================================================
        MENÚ MÓVIL
@@ -41,8 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       CERRAR MENÚ AL HACER CLIC EN UN ENLACE
-       EN DISPOSITIVOS MÓVILES
+       CERRAR MENÚ EN MÓVIL
     ===================================================== */
 
     const navLinks =
@@ -93,17 +98,169 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       CERRAR SESIÓN
-       POR AHORA SOLO ES UNA SIMULACIÓN.
-       
-       SUPABASE AUTH SE IMPLEMENTARÁ MÁS ADELANTE.
+       INICIO DE SESIÓN CON SUPABASE
+    ===================================================== */
+
+    if (loginForm) {
+
+        loginForm.addEventListener(
+            "submit",
+            async (event) => {
+
+                event.preventDefault();
+
+                const email =
+                    document
+                        .getElementById("email")
+                        .value
+                        .trim();
+
+                const password =
+                    document
+                        .getElementById("password")
+                        .value;
+
+                if (!email || !password) {
+
+                    mostrarMensaje(
+                        "Completa el correo y la contraseña.",
+                        "error"
+                    );
+
+                    return;
+
+                }
+
+
+                /* =========================================
+                   ESTADO DE CARGA
+                ========================================= */
+
+                const submitButton =
+                    loginForm.querySelector(
+                        'button[type="submit"]'
+                    );
+
+                if (submitButton) {
+
+                    submitButton.disabled = true;
+                    submitButton.textContent =
+                        "Iniciando sesión...";
+
+                }
+
+                mostrarMensaje(
+                    "Verificando tus datos...",
+                    "info"
+                );
+
+
+                /* =========================================
+                   SUPABASE AUTH
+                ========================================= */
+
+                try {
+
+                    const {
+                        data,
+                        error
+                    } =
+                        await supabaseClient.auth
+                            .signInWithPassword({
+                                email: email,
+                                password: password
+                            });
+
+
+                    /* =====================================
+                       ERROR DE SUPABASE
+                    ===================================== */
+
+                    if (error) {
+
+                        console.error(
+                            "Error de inicio de sesión:",
+                            error
+                        );
+
+                        mostrarMensaje(
+                            traducirErrorLogin(
+                                error.message
+                            ),
+                            "error"
+                        );
+
+                        return;
+
+                    }
+
+
+                    /* =====================================
+                       LOGIN CORRECTO
+                    ===================================== */
+
+                    console.log(
+                        "Usuario autenticado:",
+                        data.user
+                    );
+
+                    mostrarMensaje(
+                        "Inicio de sesión correcto. Entrando...",
+                        "success"
+                    );
+
+
+                    /* =====================================
+                       IR AL DASHBOARD
+                    ===================================== */
+
+                    setTimeout(() => {
+
+                        window.location.href =
+                            "dashboard.html";
+
+                    }, 800);
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Error inesperado:",
+                        error
+                    );
+
+                    mostrarMensaje(
+                        "Ocurrió un error inesperado. Inténtalo nuevamente.",
+                        "error"
+                    );
+
+                } finally {
+
+                    if (submitButton) {
+
+                        submitButton.disabled = false;
+                        submitButton.textContent =
+                            "Iniciar sesión";
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       CERRAR SESIÓN CON SUPABASE
     ===================================================== */
 
     if (logoutButton) {
 
         logoutButton.addEventListener(
             "click",
-            () => {
+            async () => {
 
                 const confirmLogout =
                     window.confirm(
@@ -114,8 +271,48 @@ document.addEventListener("DOMContentLoaded", () => {
                     return;
                 }
 
-                window.location.href =
-                    "index.html";
+
+                try {
+
+                    const {
+                        error
+                    } =
+                        await supabaseClient.auth
+                            .signOut();
+
+
+                    if (error) {
+
+                        console.error(
+                            "Error al cerrar sesión:",
+                            error
+                        );
+
+                        alert(
+                            "No se pudo cerrar la sesión."
+                        );
+
+                        return;
+
+                    }
+
+
+                    window.location.href =
+                        "index.html";
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Error inesperado:",
+                        error
+                    );
+
+                    alert(
+                        "Ocurrió un error al cerrar la sesión."
+                    );
+
+                }
 
             }
         );
@@ -197,6 +394,82 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
         );
+
+    }
+
+
+    /* =====================================================
+       FUNCIÓN PARA MOSTRAR MENSAJES
+    ===================================================== */
+
+    function mostrarMensaje(
+        mensaje,
+        tipo
+    ) {
+
+        if (!loginMessage) {
+            return;
+        }
+
+        loginMessage.textContent =
+            mensaje;
+
+        loginMessage.className =
+            "login-message";
+
+        loginMessage.classList.add(
+            tipo
+        );
+
+    }
+
+
+    /* =====================================================
+       TRADUCIR ERRORES DE SUPABASE
+    ===================================================== */
+
+    function traducirErrorLogin(
+        mensaje
+    ) {
+
+        const error =
+            mensaje.toLowerCase();
+
+
+        if (
+            error.includes(
+                "invalid login credentials"
+            )
+        ) {
+
+            return "Correo o contraseña incorrectos.";
+
+        }
+
+
+        if (
+            error.includes(
+                "email not confirmed"
+            )
+        ) {
+
+            return "Debes confirmar tu correo electrónico antes de iniciar sesión.";
+
+        }
+
+
+        if (
+            error.includes(
+                "too many requests"
+            )
+        ) {
+
+            return "Demasiados intentos. Espera unos minutos e inténtalo nuevamente.";
+
+        }
+
+
+        return mensaje;
 
     }
 
